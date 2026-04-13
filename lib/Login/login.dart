@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testingterminal/CustomWidgets/CustomWidgets.dart';
+import 'package:testingterminal/welcome/welcome.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -74,13 +76,30 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 13),
-                        Text(
-                          "Forget password?",
-                          style: TextStyle(color: Colors.red, fontSize: 17),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ForgetPassword(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "Forget password?",
+                            style: TextStyle(color: Colors.red, fontSize: 17),
+                          ),
                         ),
                         SizedBox(height: 13),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Welcome(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.deepOrange,
                             fixedSize: Size(330, 45),
