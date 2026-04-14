@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:testingterminal/CustomWidgets/CustomWidgets.dart';
 import 'package:testingterminal/DeliverTo/DeliverTo.dart';
+import 'package:testingterminal/HomeScreen/HomeScreen.dart';
+import 'package:testingterminal/home/home.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -12,7 +14,15 @@ class Welcome extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Skiptext(),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeScren()),
+              );
+            },
+            child: Skiptext(),
+          ),
           logo(),
           SizedBox(height: 30),
           Center(
