@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testingterminal/CustomWidgets/CustomWidgets.dart';
 import 'package:testingterminal/DeliverTo/DeliverTo.dart';
-import 'package:testingterminal/HomeScreen/HomeScreen.dart';
+import 'package:testingterminal/SearchScreen/SearchOne.dart';
 import 'package:testingterminal/home/home.dart';
 
 class Welcome extends StatelessWidget {
@@ -18,7 +18,7 @@ class Welcome extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScren()),
+                MaterialPageRoute(builder: (context) => SearchOne()),
               );
             },
             child: Skiptext(),

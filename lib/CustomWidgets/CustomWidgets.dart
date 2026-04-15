@@ -82,7 +82,11 @@ class ForgetPassword extends StatelessWidget {
             margin: EdgeInsets.only(left: 24),
             child: Text(
               "Forgot\nPassword?",
-              style: TextStyle(color: Colors.deepOrange, fontSize: 30),
+              style: TextStyle(
+                color: Colors.orange,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           SizedBox(height: 13),
@@ -99,6 +103,33 @@ class ForgetPassword extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.only(left: 20),
+            child: Text(
+              'We will send you recovery email to set or reset your\npassword',
+              style: TextStyle(color: Colors.grey.shade600, fontSize: 13),
+            ),
+          ),
+          SizedBox(height: 20),
+          Container(
+            margin: EdgeInsets.only(left: 20),
+            child: Text(
+              'Send Code',
+              style: TextStyle(color: Colors.grey.shade600, fontSize: 30),
+            ),
+          ),
+          SizedBox(height: 20),
+          Container(
+            margin: EdgeInsets.only(left: 280),
+            child: FloatingActionButton(
+              shape: CircleBorder(),
+              backgroundColor: Colors.orange,
+              foregroundColor: Colors.white,
+              onPressed: () {},
+              child: Icon(Icons.arrow_forward_outlined),
             ),
           ),
         ],

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:testingterminal/SearchScreen/SearchTwo.dart';
 
-class HomeScren extends StatelessWidget {
-  const HomeScren({super.key});
+class SearchOne extends StatelessWidget {
+  const SearchOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,14 +39,22 @@ class HomeScren extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(Icons.filter_alt_rounded),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SearchTwo()),
+                    );
+                  },
+                  child: Icon(Icons.filter_alt_rounded),
+                ),
               ),
             ],
           ),
           SizedBox(height: 50),
           Container(
             padding: EdgeInsets.only(left: 20),
-            height: 586,
+            height: 585,
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
@@ -117,16 +126,75 @@ class HomeScren extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Row(),
+                Row(
+                  children: [
+                    Image.asset(
+                      'assets/image/popular.png',
+                      height: 100,
+                      width: 320,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    SizedBox(width: 13),
+                    Text(
+                      'Daily Meals',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                    SizedBox(width: 28),
+                    Text(
+                      'Middle\nEastern',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                    SizedBox(width: 28),
+                    Text(
+                      'Chineese',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                    SizedBox(width: 32),
+                    Text(
+                      'Desi',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'border'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'border'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.explore_outlined),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star_border_rounded),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_bubble_outline),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_2_outlined),
+            label: '',
+          ),
         ],
       ),
     );
