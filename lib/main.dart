@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testingterminal/splashScreen/spalsh_screen.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 void main() {
   runApp(Preactice());
