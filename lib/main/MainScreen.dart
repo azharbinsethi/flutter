@@ -12,28 +12,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       drawer: _DrawerWidget(),
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: false,
-        //leading: Icon(Icons.home),
-        actions: [_favIconButton(), SizedBox(width: 10)],
-
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Home',
-              style: GoogleFonts.poppins(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-            ),
-            Text(
-              '21-42-34, Banjara Hills, Hyder....',
-              style: TextStyle(fontSize: 16),
-            ),
-          ],
-        ),
-      ),
+      appBar: _appbaar(),
       body: Column(
         children: [
           Row(
@@ -76,6 +55,31 @@ class MainScreen extends StatelessWidget {
             ],
           ),
           _selectPreferences(controller: _controller),
+        ],
+      ),
+    );
+  }
+
+  AppBar _appbaar() {
+    return AppBar(
+      centerTitle: false,
+      //leading: Icon(Icons.home),
+      actions: [_favIconButton(), SizedBox(width: 10)],
+
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Home',
+            style: GoogleFonts.poppins(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          ),
+          Text(
+            '21-42-34, Banjara Hills, Hyder....',
+            style: TextStyle(fontSize: 16),
+          ),
         ],
       ),
     );
